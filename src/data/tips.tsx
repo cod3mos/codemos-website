@@ -1,10 +1,10 @@
-interface Tip {
-    sourceImage: string
+export interface Item {
     title: string
+    sourceImage: string
     description: string
 }
 
-const tips: Tip[] = [
+const tips: Item[] = [
     {
         sourceImage: 'icons/icon-settings.png',
         title: 'Melhorias Continuas',
@@ -40,4 +40,4 @@ const tips: Tip[] = [
     }
 ]
 
-export { Tip, tips }
+export { tips }

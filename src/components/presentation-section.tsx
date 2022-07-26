@@ -1,5 +1,4 @@
 import React from 'react'
-import Divider from './divider'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -28,7 +27,7 @@ const Strong = styled.span`
 const Subtitle = styled.p`
     font-size: 14px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
 `
 
 function PresentationSection() {

@@ -3,7 +3,8 @@ import Divider from './divider'
 import styled from 'styled-components'
 
 import { Fragment } from 'react'
-import { Item, tips } from '../data/tips'
+import { Item } from 'src/data/tips'
+import { services } from '../data/services'
 
 const Container = styled.div`
     width: 100%;
@@ -12,7 +13,7 @@ const Container = styled.div`
     flex-direction: column;
 `
 
-const TipsTitle = styled.p`
+const ServicesTitle = styled.p`
     font-size: 32px;
     font-weight: 500;
     text-align: center;
@@ -37,8 +38,16 @@ const Description = styled.p`
     color: rgba(255, 255, 255, 0.8);
 `
 
-function renderTipsComponent() {
-    return tips.map((item: Item, index) => (
+const Text = styled.p`
+    font-size: 14px;
+    line-height: 195%;
+    text-align: center;
+    letter-spacing: 8%;
+    color: rgba(255, 255, 255, 0.8);
+`
+
+function renderServicesComponent() {
+    return services.map((item: Item, index) => (
         <Fragment key={index}>
             <Image src={item.sourceImage} />
             <Title>{item.title}</Title>
@@ -47,16 +56,21 @@ function renderTipsComponent() {
     ))
 }
 
-function TipsSection() {
+function ServicesSection() {
     return (
         <Container>
-            <TipsTitle>Matenha seu produto atualizado</TipsTitle>
+            <ServicesTitle>Nossos serviços</ServicesTitle>
 
-            {renderTipsComponent()}
+            <Text>
+                A seguir temos um breve resumo dos serviços que prestamos, dúvidas serão tiradas
+                através das nossas redes sociais.
+            </Text>
+
+            {renderServicesComponent()}
 
             <Divider width={50} />
         </Container>
     )
 }
 
-export default TipsSection
+export default ServicesSection

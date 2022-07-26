@@ -27,17 +27,16 @@ const Strong = styled.span`
 `
 const Description = styled.p`
     font-size: 14px;
-    text-align: center;
-    text-align: justify;
     line-height: 195%;
+    text-align: center;
     letter-spacing: 8%;
-    color: rgba(255, 255, 255, 0.6);
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.8);
 `
 
 const Bold = styled(Strong)`
     font-size: 14px;
     font-weight: 400;
-
     color: ${({ theme }) => theme.colors.secondary};
 `
 

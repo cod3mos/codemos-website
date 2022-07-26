@@ -1,19 +1,21 @@
+import { DefaultTheme } from '../pages/_app'
 import { createGlobalStyle } from 'styled-components'
-import { DefaultTheme } from '../src/pages/_app'
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   html, body {
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto';
+    font-weight: 400;
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
   .main {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     background-size: fill;
+    flex-direction: column;
     justify-content: center;
     background-repeat: no-repeat;
     background-image: url('images/presentation-background.png');
@@ -22,7 +24,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   .content {
     display: flex;
     max-width: 1000px;
-    padding: 0  10% 0 10% ;
+    padding: 0  5% 0 5% ;
     flex-direction: column;
     justify-content: center;
   }

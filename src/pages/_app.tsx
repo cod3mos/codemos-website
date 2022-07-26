@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalStyle from '../../styles/globals'
+import GlobalStyle from '../styles/globals'
 
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'

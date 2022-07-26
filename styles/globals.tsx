@@ -9,6 +9,23 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.primary};
   }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    background-size: fill;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-image: url('images/presentation-background.png');
+  }
+
+  .content {
+    display: flex;
+    max-width: 1000px;
+    padding: 0  10% 0 10% ;
+    flex-direction: column;
+    justify-content: center;
+  }
   
   a {
     color: inherit;

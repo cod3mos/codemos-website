@@ -1,7 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import styled from 'styled-components'
 import HeaderCompany from '../components/header'
+import TipsSection from '../components/tips-section'
+import AboutCompanySection from '../components/about-section'
+import PresentationSection from '../components/presentation-section'
 
 export default function Home() {
     return (
@@ -12,6 +14,14 @@ export default function Home() {
             </Head>
 
             <HeaderCompany />
+
+            <div className="main">
+                <div className="content">
+                    <PresentationSection />
+                    <AboutCompanySection />
+                    <TipsSection />
+                </div>
+            </div>
         </div>
     )
 }

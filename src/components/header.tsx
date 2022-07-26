@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -11,7 +10,8 @@ const Container = styled.div`
 `
 
 const Header = styled.h1`
-    font-size: 36px;
+    font-size: 32px;
+    font-weight: 500;
     margin-left: 15px;
 `
 function HeaderCompany() {

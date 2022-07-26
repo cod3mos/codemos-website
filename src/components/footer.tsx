@@ -92,7 +92,7 @@ function FooterCompany() {
 
             <Footer>
                 <Copyright>
-                    {new Date().getFullYear()} Copyright © Codemos - Todos os direitos reservados
+                    {getFullYear()} Copyright © Codemos - Todos os direitos reservados
                 </Copyright>
             </Footer>
         </>

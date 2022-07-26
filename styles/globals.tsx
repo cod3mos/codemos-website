@@ -3,8 +3,8 @@ import { DefaultTheme } from '../src/pages/_app'
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   html, body {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: 'Roboto';
     color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.primary};

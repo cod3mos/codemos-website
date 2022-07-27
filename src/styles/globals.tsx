@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   .main {
     display: flex;
     align-items: center;
-    background-size: fill;
+    background-size: contain;
     flex-direction: column;
     justify-content: center;
     background-repeat: no-repeat;

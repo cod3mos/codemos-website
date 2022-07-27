@@ -1,12 +1,17 @@
 import React from 'react'
-import Divider from './divider'
 import styled from 'styled-components'
 
-import { Fragment } from 'react'
 import { Item } from 'src/data/tips'
 import { services } from '../data/services'
 
 const Container = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+`
+
+const Group = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,7 +36,7 @@ const Image = styled.img`
 
 const Description = styled.p`
     font-size: 14px;
-    max-width: 216px;
+    max-width: 350px;
     line-height: 195%;
     text-align: center;
     letter-spacing: 8%;
@@ -43,16 +48,17 @@ const Text = styled.p`
     line-height: 195%;
     text-align: center;
     letter-spacing: 8%;
+    margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.8);
 `
 
 function renderServicesComponent() {
     return services.map((item: Item, index) => (
-        <Fragment key={index}>
+        <Group key={index}>
             <Image src={item.sourceImage} />
             <Title>{item.title}</Title>
             <Description>{item.description}</Description>
-        </Fragment>
+        </Group>
     ))
 }
 
@@ -67,8 +73,6 @@ function ServicesSection() {
             </Text>
 
             {renderServicesComponent()}
-
-            <Divider width={50} />
         </Container>
     )
 }

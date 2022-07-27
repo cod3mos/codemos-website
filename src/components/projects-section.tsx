@@ -30,6 +30,7 @@ const Text = styled.p`
     line-height: 195%;
     text-align: center;
     letter-spacing: 8%;
+    max-width: 350px;
     color: rgba(255, 255, 255, 0.8);
 `
 const TextBold = styled.span`
@@ -38,7 +39,7 @@ const TextBold = styled.span`
     color: ${({ theme }) => theme.colors.secondary};
 `
 
-const LinkButton = styled.a`
+const LinkButton = styled.div`
     font-size: 20px;
     font-weight: 800;
     line-height: 195%;
@@ -46,7 +47,17 @@ const LinkButton = styled.a`
     letter-spacing: 10%;
     color: ${({ theme }) => theme.colors.secondary};
     margin-bottom: 40px;
+
+    :hover {
+        cursor: pointer;
+    }
 `
+
+function openLink(): void {
+    const link: string = 'https://play.google.com/store/apps/details?id=br.com.codemos.nerdvalorant'
+
+    window.open(link, '_blank').focus()
+}
 
 function ProjectsSection() {
     return (
@@ -67,7 +78,7 @@ function ProjectsSection() {
                 aplicativo Nerd Valorant visa o auxilio de jogadas apresentando videos de pixels.
             </Text>
 
-            <LinkButton>Ver no Google Play</LinkButton>
+            <LinkButton onClick={() => openLink()}>Ver no Google Play</LinkButton>
 
             <Image src="images/meu-cronograma-mockup.png" />
 

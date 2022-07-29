@@ -45,12 +45,6 @@ export default class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-
-                <script
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7609736782077030"
-                    crossOrigin="anonymous"
-                ></script>
             </Html>
         )
     }

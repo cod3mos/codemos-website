@@ -33,7 +33,6 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   }
 
   .content {
-    width: 99vw;
     display: grid;
     max-width: 1000px;
     align-items: center;

@@ -8,27 +8,28 @@ const Container = styled.div`
     display: grid;
     align-items: stretch;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20vh 30vh 3vh;
+    grid-template-rows: 3vh 22vh 30vh;
     grid-template-areas:
+        'grid-area-divider-footer grid-area-divider-footer grid-area-divider-footer'
         'grid-area-title grid-area-title grid-area-title'
-        'grid-area-0 grid-area-1 grid-area-2'
-        'grid-area-divider-footer grid-area-divider-footer grid-area-divider-footer';
+        'grid-area-0 grid-area-1 grid-area-2';
 
     @media ${props => props.theme.breakpoints.s} {
         grid-template-columns: 1fr;
-        grid-template-rows: 35vh 30vh 30vh 30vh 5vh;
+        grid-template-rows: 5vh 35vh 30vh 30vh 30vh;
         grid-template-areas:
+            'grid-area-divider-footer'
             'grid-area-title '
             'grid-area-0 '
             'grid-area-1 '
-            'grid-area-2'
-            'grid-area-divider-footer';
+            'grid-area-2';
     }
 `
 
 const TextTitleServices = styled.p`
     font-size: 32px;
     font-weight: 500;
+    margin-left: 0px;
 
     @media ${props => props.theme.breakpoints.s} {
         text-align: center;
@@ -61,11 +62,14 @@ const Image = styled.img`
 const TextTitle = styled.p`
     margin: 10px;
     padding: 10px;
-    margin-left: 0px;
+    padding-left: 0px;
     font-size: 20px;
+    margin-left: 0px;
     font-weight: 500;
 
     @media ${props => props.theme.breakpoints.s} {
+        margin-left: 10px;
+        padding-left: 10px;
         text-align: center;
     }
 `
@@ -74,12 +78,15 @@ const TextIconDescription = styled.p`
     margin: 20px;
     font-size: 14px;
     margin-top: 5px;
+    margin-left: 0px;
+    min-width: 200px;
     line-height: 195%;
     letter-spacing: 8%;
     margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.8);
 
     @media ${props => props.theme.breakpoints.s} {
+        margin-left: 20px;
         text-align: center;
     }
 `

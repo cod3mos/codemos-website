@@ -11,7 +11,7 @@ const Container = styled.div`
 
     @media ${props => props.theme.breakpoints.s} {
         grid-template-columns: 1fr;
-        grid-template-rows: 25vh 95vh 85vh;
+        grid-template-rows: 25vh 102vh 95vh;
         grid-template-areas:
             'grid-area-title'
             'grid-area-project-primary'
@@ -26,20 +26,24 @@ const TextTitleProjects = styled.p`
     font-weight: 500;
 
     @media ${props => props.theme.breakpoints.s} {
+        margin-left: 16px;
         text-align: center;
     }
 `
 
 const TextDescription = styled.p`
     margin: 16px;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 0px;
+    padding-right: 50px;
     line-height: 195%;
     letter-spacing: 8%;
+    text-align: justify;
     color: rgba(255, 255, 255, 0.8);
 
     @media ${props => props.theme.breakpoints.s} {
         padding: 10px;
+        margin-left: 16px;
         text-align: center;
     }
 `
@@ -61,7 +65,7 @@ const TextProjectName = styled.p`
 `
 
 const TextBold = styled.span`
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: ${({ theme }) => theme.colors.secondary};
 `

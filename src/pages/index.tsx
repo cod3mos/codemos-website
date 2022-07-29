@@ -21,19 +21,13 @@ export default function Home() {
                 <div className="content">
                     <PresentationSection />
                     <AboutCompanySection />
-                    <ServicesSection />
                     <TipsSection />
                     <LastWorksSection />
+                    <ServicesSection />
                 </div>
             </div>
 
             <FooterCompany />
-
-            <script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7609736782077030"
-                crossOrigin="anonymous"
-            />
         </div>
     )
 }

@@ -50,6 +50,7 @@ const TextTitleService = styled.p`
     font-weight: 500;
 
     @media ${props => props.theme.breakpoints.s} {
+        margin-left: 10px;
         text-align: center;
     }
 `
@@ -58,12 +59,15 @@ const TextDescription = styled.p`
     margin: 10px;
     padding: 10px;
     margin-left: 0px;
+    padding-left: 0px;
     line-height: 195%;
     letter-spacing: 8%;
     margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.8);
 
     @media ${props => props.theme.breakpoints.s} {
+        margin-left: 10px;
+        padding-left: 10px;
         text-align: center;
     }
 `

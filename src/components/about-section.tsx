@@ -38,6 +38,7 @@ const TextTitle = styled.p`
     text-align: left;
 
     @media ${props => props.theme.breakpoints.m} {
+        margin-left: 16px;
         text-align: center;
     }
 `
@@ -59,6 +60,7 @@ const TextDescription = styled.p`
 
     @media ${props => props.theme.breakpoints.m} {
         padding: 5px;
+        margin-left: 16px;
         text-align: center;
     }
 `

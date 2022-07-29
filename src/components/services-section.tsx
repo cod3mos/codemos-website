@@ -1,78 +1,143 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import { Item } from 'src/data/tips'
 import { services } from '../data/services'
+import Divider from './divider'
 
 const Container = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 30vh 3vh;
+    grid-template-areas:
+        'grid-area-title grid-area-title grid-area-title'
+        'grid-area-0 grid-area-1 grid-area-2'
+        'grid-area-divider-footer grid-area-divider-footer grid-area-divider-footer';
+
+    @media ${props => props.theme.breakpoints.s} {
+        grid-template-columns: 1fr;
+        grid-template-rows: 35vh 30vh 30vh 30vh 5vh;
+        grid-template-areas:
+            'grid-area-title '
+            'grid-area-0 '
+            'grid-area-1 '
+            'grid-area-2'
+            'grid-area-divider-footer';
+    }
 `
 
-const Group = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-`
-
-const ServicesTitle = styled.p`
+const TextTitleServices = styled.p`
     font-size: 32px;
     font-weight: 500;
-    text-align: center;
+
+    @media ${props => props.theme.breakpoints.s} {
+        text-align: center;
+    }
 `
 
-const Title = styled.p`
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
+const TextDescription = styled.p`
+    margin: 0px;
+    font-size: 16px;
+    line-height: 195%;
+    letter-spacing: 8%;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.8);
+
+    @media ${props => props.theme.breakpoints.s} {
+        text-align: center;
+    }
+`
+
+const TextBold = styled.span`
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.secondary};
 `
 
 const Image = styled.img`
     width: 56.57px;
+    height: 56.57px;
 `
 
-const Description = styled.p`
-    font-size: 14px;
-    max-width: 350px;
-    line-height: 195%;
-    text-align: center;
-    letter-spacing: 8%;
-    color: rgba(255, 255, 255, 0.8);
+const TextTitle = styled.p`
+    margin: 10px;
+    padding: 10px;
+    margin-left: 0px;
+    font-size: 20px;
+    font-weight: 500;
+
+    @media ${props => props.theme.breakpoints.s} {
+        text-align: center;
+    }
 `
 
-const Text = styled.p`
+const TextIconDescription = styled.p`
+    margin: 20px;
     font-size: 14px;
+    margin-top: 5px;
     line-height: 195%;
-    text-align: center;
     letter-spacing: 8%;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.8);
+
+    @media ${props => props.theme.breakpoints.s} {
+        text-align: center;
+    }
+`
+
+const GridGroupTitle = styled.div`
+    grid-area: grid-area-title;
+`
+
+const GridGroupItems = styled.div<{ index: number }>`
+    grid-area: ${({ index }) => `grid-area-${index}`};
+`
+
+const GridGroupDividerFooter = styled.div`
+    grid-area: grid-area-divider-footer;
+
+    @media ${props => props.theme.breakpoints.s} {
+        justify-self: center;
+    }
+`
+
+const ImageGroup = styled.p`
+    margin: 0px;
+
+    @media ${props => props.theme.breakpoints.s} {
+        text-align: center;
+    }
 `
 
 function renderServicesComponent() {
     return services.map((item: Item, index) => (
-        <Group key={index}>
-            <Image src={item.sourceImage} />
-            <Title>{item.title}</Title>
-            <Description>{item.description}</Description>
-        </Group>
+        <GridGroupItems key={index} index={index}>
+            <ImageGroup>
+                <Image src={item.sourceImage} alt={`icone de ${item.title}`} />
+            </ImageGroup>
+            <TextTitle>{item.title}</TextTitle>
+            <TextIconDescription>{item.description}</TextIconDescription>
+        </GridGroupItems>
     ))
 }
 
 function ServicesSection() {
     return (
         <Container>
-            <ServicesTitle>Nossos serviços</ServicesTitle>
+            <GridGroupTitle>
+                <TextTitleServices>Nossos serviços</TextTitleServices>
 
-            <Text>
-                A seguir temos um breve resumo dos serviços que prestamos, dúvidas serão tiradas
-                através das nossas redes sociais.
-            </Text>
+                <TextDescription>
+                    A seguir temos um breve resumo dos serviços que prestamos, em caso de dúvidas ou
+                    orçamentos nos contate através do nosso e-mail:{' '}
+                    <TextBold>contato@codemos.com.br</TextBold>
+                </TextDescription>
+            </GridGroupTitle>
 
             {renderServicesComponent()}
+
+            <GridGroupDividerFooter>
+                <Divider width={80} marginTop={20} />
+            </GridGroupDividerFooter>
         </Container>
     )
 }

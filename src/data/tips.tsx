@@ -29,7 +29,7 @@ const tips: Item[] = [
     },
     {
         sourceImage: 'icons/icon-fire.png',
-        title: 'Em alta',
+        title: 'Aplicativos em alta',
         description: 'Aplicativos hoje são indispensaveis para tudo então que você está esperando?'
     },
     {

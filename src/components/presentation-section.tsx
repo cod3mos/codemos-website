@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -6,26 +5,30 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 `
 
-const Text = styled.p`
+const TagText = styled.p`
+    margin: 16px;
     font-size: 16px;
 `
 
-const Title = styled.p`
+const TextTitle = styled.p`
+    margin: 16px;
     font-size: 52px;
     font-weight: 500;
     text-align: center;
 `
 
-const Strong = styled.span`
+const TextTitleBold = styled.span`
     font-size: 52px;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.secondary};
 `
 
-const Subtitle = styled.p`
-    font-size: 14px;
+const TextDescription = styled.p`
+    margin: 16px;
+    font-size: 16px;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
 `
@@ -33,13 +36,15 @@ const Subtitle = styled.p`
 function PresentationSection() {
     return (
         <Container>
-            <Text>{'<Hello Word/>'}</Text>
+            <TagText>{'<Hello Word/>'}</TagText>
 
-            <Title>
-                Desenvolvedor <Strong>Fullstack</Strong>
-            </Title>
+            <TextTitle>
+                Desenvolvedor <TextTitleBold>Fullstack</TextTitleBold>
+            </TextTitle>
 
-            <Subtitle>Estar ao seu gosto é prioridade, ser funcional e nosso dever!</Subtitle>
+            <TextDescription>
+                Estar ao seu gosto é prioridade, ser funcional e nosso dever!
+            </TextDescription>
         </Container>
     )
 }

@@ -1,18 +1,17 @@
-import React from 'react'
 import Head from 'next/head'
-import HeaderCompany from '../components/header'
-import TipsSection from '../components/tips-section'
-import AboutCompanySection from '../components/about-section'
-import PresentationSection from '../components/presentation-section'
-import ProjectsSection from 'src/components/projects-section'
-import ServicesSection from 'src/components/services-section'
 import FooterCompany from 'src/components/footer'
+import LastWorksSection from 'src/components/last-works-section'
+import ServicesSection from 'src/components/services-section'
+import AboutCompanySection from '../components/about-section'
+import HeaderCompany from '../components/header'
+import PresentationSection from '../components/presentation-section'
+import TipsSection from '../components/tips-section'
 
 export default function Home() {
     return (
         <div className="container">
             <Head>
-                <title>Bem-vindo</title>
+                <title>Codemos</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -22,9 +21,9 @@ export default function Home() {
                 <div className="content">
                     <PresentationSection />
                     <AboutCompanySection />
-                    <TipsSection />
-                    <ProjectsSection />
                     <ServicesSection />
+                    <TipsSection />
+                    <LastWorksSection />
                 </div>
             </div>
 

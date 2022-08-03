@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
                         async
                         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7609736782077030"
                         crossOrigin="anonymous"
-                    />
+                    ></script>
                 </body>
             </Html>
         )
